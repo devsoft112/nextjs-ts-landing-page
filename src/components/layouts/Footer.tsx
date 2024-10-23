@@ -153,7 +153,7 @@ export default function Footer() {
               height={35}
             />
             <Image
-              src='/svg/LinkedIn.svg'
+              src='/svg/Linkedin.svg'
               alt='LinkedIn'
               width={35}
               height={35}
