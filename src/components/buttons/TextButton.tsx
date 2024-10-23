@@ -17,7 +17,7 @@ const TextButton = React.forwardRef<HTMLButtonElement, TextButtonProps>(
       disabled: buttonDisabled,
       ...rest
     },
-    ref
+    ref,
   ) => {
     return (
       <button
@@ -28,7 +28,6 @@ const TextButton = React.forwardRef<HTMLButtonElement, TextButtonProps>(
           'button inline-flex items-center justify-center font-semibold',
           'focus-visible:ring-primary-500 focus:outline-none focus-visible:ring',
           'transition duration-100',
-          //#region  //*=========== Variant ===========
           variant === 'primary' && [
             'text-primary-500 hover:text-primary-600 active:text-primary-700',
             'disabled:text-primary-200',
@@ -37,16 +36,15 @@ const TextButton = React.forwardRef<HTMLButtonElement, TextButtonProps>(
             'text-black hover:text-gray-600 active:text-gray-800',
             'disabled:text-gray-300',
           ],
-          //#endregion  //*======== Variant ===========
           'disabled:cursor-not-allowed disabled:brightness-105 disabled:hover:underline',
-          className
+          className,
         )}
         {...rest}
       >
         {children}
       </button>
     );
-  }
+  },
 );
 
 export default TextButton;

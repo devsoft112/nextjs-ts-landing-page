@@ -14,6 +14,7 @@ import React from 'react';
 import Button from '@/components/buttons/Button';
 import IconButton from '@/components/buttons/IconButton';
 import TextButton from '@/components/buttons/TextButton';
+import DownloadButton from '@/components/DownloadButton';
 import ArrowLink from '@/components/links/ArrowLink';
 import ButtonLink from '@/components/links/ButtonLink';
 import PrimaryLink from '@/components/links/PrimaryLink';
@@ -41,7 +42,7 @@ export default function ComponentPage() {
         <div
           className={clsx(
             'layout min-h-screen py-20',
-            mode === 'dark' ? 'text-white' : 'text-black'
+            mode === 'dark' ? 'text-white' : 'text-black',
           )}
         >
           <h1>Built-in Components</h1>
@@ -76,7 +77,7 @@ export default function ComponentPage() {
                     mode === 'dark'
                       ? 'bg-dark border border-gray-600'
                       : 'border-gray-300 bg-white',
-                    'focus:border-primary-400 focus:ring-primary-400 focus:outline-none focus:ring'
+                    'focus:border-primary-400 focus:ring-primary-400 focus:outline-none focus:ring',
                   )}
                   onChange={(e) => setColor(e.target.value as Color)}
                 >
@@ -126,6 +127,9 @@ export default function ComponentPage() {
                 </div>
               </div>
             </li>
+            <DownloadButton platform='App Store' background='orange' />
+            <DownloadButton platform='Play Market' background='white' />
+
             <li className='space-y-2'>
               <h2 className='text-lg md:text-xl'>UnstyledLink</h2>
               <p className={clsx('!mt-1 text-sm', textColor)}>

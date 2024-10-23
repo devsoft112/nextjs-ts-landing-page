@@ -1,0 +1,22 @@
+.bg-hero-pattern {
+  background-image: url('/images/hero_bg.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-mockup {
+  position: absolute;
+  left: 50%;
+  bottom: -100px;
+  transform: translate(-50%, 0);
+  z-index: 1;
+  max-width: 1100px;
+}
+
+.hero-mockup-bg {
+  position: relative;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  margin-top: 400px;
+}
