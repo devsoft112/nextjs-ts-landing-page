@@ -35,8 +35,16 @@ export default function DownloadApps() {
             iaculis non sed sagittis vitae.
           </p>
           <div className='mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-8'>
-            <DownloadButton platform='App Store' background='white' />
-            <DownloadButton platform='Play Market' background='white' />
+            <DownloadButton
+              platform='App Store'
+              background='white'
+              className='w-full md:w-auto'
+            />
+            <DownloadButton
+              platform='Play Market'
+              background='white'
+              className='w-full md:w-auto'
+            />
           </div>
         </div>
       </div>

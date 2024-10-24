@@ -16,7 +16,17 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({
   className,
   ...rest
 }) => {
-  const icon_name = platform === 'App Store' ? 'apple_icon' : 'google_play';
+  let icon_name = 'App Store';
+
+  if (background == 'orange') {
+    icon_name =
+      platform === 'App Store'
+        ? 'app-store-white-icon'
+        : 'play-market-white-icon';
+  } else {
+    icon_name =
+      platform === 'App Store' ? 'app-store-icon' : 'play-market-icon';
+  }
 
   return (
     <button
@@ -32,7 +42,7 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({
       {...rest}
     >
       <NextImage
-        src={`/images/${icon_name}.png`}
+        src={`/svg/${icon_name}.svg`}
         width={35}
         height={35}
         alt='App Mockup Right'
