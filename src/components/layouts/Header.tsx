@@ -32,6 +32,9 @@ export default function Header({ isHomePage }: { isHomePage: boolean }) {
 
             {/* Desktop Navigation */}
             <nav className={`hidden lg:flex space-x-10 ${textColor}`}>
+              <Link href='/' className={textColor}>
+                Home
+              </Link>
               <Link href='/about' className={textColor}>
                 About
               </Link>
