@@ -43,6 +43,27 @@ const testimonials = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.',
     avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
   },
+  {
+    name: 'Name Surname',
+    role: 'Employer',
+    feedback:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.',
+    avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
+  },
+  {
+    name: 'Name Surname',
+    role: 'Worker',
+    feedback:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.',
+    avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
+  },
+  {
+    name: 'Name Surname',
+    role: 'Employer',
+    feedback:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.',
+    avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
+  },
 ];
 
 export default function Testimonials() {
@@ -53,8 +74,8 @@ export default function Testimonials() {
       <div className='text-center'>
         <p className='text-orange-500 font-semibold'>Testimonials</p>
         <h2 className='text-5xl font-light my-4 mb-10 max-w-xl mx-auto'>
-          What <span className='font-extrabold text-blue-600'>People Say</span>{' '}
-          About <span className='font-extrabold text-blue-600'>Jovoria</span>?
+          What <span className='font-extrabold'>People Say</span> About{' '}
+          <span className='font-extrabold text-blue-600'>RUSH Gigs</span>?
         </h2>
       </div>
       <div className='container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto px-2'>

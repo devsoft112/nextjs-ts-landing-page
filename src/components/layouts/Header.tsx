@@ -1,4 +1,5 @@
 // src/components/layouts/Header.tsx
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi'; // Icons for mobile menu
@@ -20,13 +21,13 @@ export default function Header({ isHomePage }: { isHomePage: boolean }) {
 
   return (
     <header
-      className={`absolute w-full z-10 ${isHomePage ? 'bg-transparent' : 'bg-white shadow-lg'}`}
+      className={`absolute w-full z-10 ${isHomePage ? 'bg-transparent' : 'bg-white'}`}
     >
       <div className='container-fluid mx-auto flex items-center justify-between p-6 px-4 lg:px-24'>
         <div className='flex items-center justify-between w-full'>
           <div className='flex items-center'>
             <Link href='/' className='flex items-center mr-24'>
-              <img src={logoURL} alt='Logo' className='h-10' />
+              <Image src={logoURL} alt='Logo' width={190} height={100} />
             </Link>
 
             {/* Desktop Navigation */}
