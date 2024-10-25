@@ -163,7 +163,7 @@ export default function Footer() {
 
         <div className='flex flex-col sm:flex-row justify-between items-center border-t border-gray-200 pt-4 mt-4'>
           <div className='text-sm text-gray-600 space-x-4'>
-            <UnderlineLink href='#'>Terms and Conditions</UnderlineLink>
+            <UnderlineLink href='/terms'>Terms and Conditions</UnderlineLink>
             <UnderlineLink href='#'>Privacy Policy</UnderlineLink>
           </div>
           <p className='text-sm text-gray-600 mt-4 sm:mt-0'>

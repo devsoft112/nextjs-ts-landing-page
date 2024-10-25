@@ -84,7 +84,7 @@ export default function Header({ isHomePage }: { isHomePage: boolean }) {
               <Link href='/investors' className='text-gray-800'>
                 Investors
               </Link>
-              <Link href='/contact' className='text-gray-800'>
+              <Link href='/careers' className='text-gray-800'>
                 Careers
               </Link>
               <Button variant='primary' isDarkBg={true}>

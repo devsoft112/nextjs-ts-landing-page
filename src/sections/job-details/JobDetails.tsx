@@ -1,4 +1,5 @@
 // src/sections/job-details/JobDetailsSection.tsx
+import Link from 'next/link';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 
 import JobControls from '@/components/jobs/JobControls';
@@ -12,6 +13,17 @@ interface JobDetailsSectionProps {
 export default function JobDetailsSection({ job }: JobDetailsSectionProps) {
   return (
     <section className='container mx-auto'>
+      {/* Breadcrumbs */}
+      <div className='py-8 px-2'>
+        <nav className='text-sm'>
+          <Link href='/careers' className='text-gray-500 hover:text-gray-700'>
+            Careers
+          </Link>
+          <span className='mx-2 text-gray-500'>/</span>
+          <span className='font-bold text-black'>{job.title}</span>
+        </nav>
+      </div>
+
       <div className='py-12 px-4 md:px-16 mb-10 shadow-xl rounded-lg'>
         <div className='px-6'>
           <div className='mb-8 flex items-center justify-between'>

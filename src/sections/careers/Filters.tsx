@@ -25,6 +25,7 @@ export default function FilterSection() {
   const [selectedAdvertisingLabels, setSelectedAdvertisingLabels] = useState<
     string[]
   >([]);
+  const [selectedRoleType, setSelectedRoleType] = useState('full-time'); // This will hold the current selection
 
   const technologyRef = useRef<HTMLDivElement>(null);
   const advertisingRef = useRef<HTMLDivElement>(null);
@@ -148,8 +149,11 @@ export default function FilterSection() {
 
         {/* Role Type Dropdown */}
         <div className='relative w-full md:w-auto'>
-          <select className='w-full md:w-48 py-3 px-8 rounded-full bg-white border text-gray-600 focus:outline-none shadow-sm appearance-none'>
-            <option value='full-time'>Role Type</option>
+          <select
+            value={selectedRoleType} // Controlled component
+            onChange={(e) => setSelectedRoleType(e.target.value)} // Updates state on change
+            className='w-full md:w-48 py-3 px-8 rounded-full bg-white border text-gray-600 focus:outline-none shadow-sm appearance-none'
+          >
             <option value='full-time'>Full-Time</option>
             <option value='part-time'>Part-Time</option>
             <option value='contract'>Contract</option>

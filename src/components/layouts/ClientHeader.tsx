@@ -16,4 +16,4 @@ export default function ClientHeader() {
   return <Header isHomePage={isHomePage} />;
 }
 
-const homePaths = ['/', '/apps', '/careers', '/jobs'];
+const homePaths = ['/', '/apps', '/careers', '/jobs', '/terms'];
