@@ -60,7 +60,7 @@ export default function InvestorsHero() {
         </div>
 
         {/* Text Section */}
-        <div className='lg:w-1/2 text-left mt-8 lg:mt-0'>
+        <div className='lg:w-1/2 text-left mt-0'>
           <p className='text-orange-500 font-semibold text-lg text-center md:text-left'>
             Investment Opportunity
           </p>
@@ -69,7 +69,7 @@ export default function InvestorsHero() {
             <span className='font-extrabold text-blue-600'>RUSH Gigs</span>{' '}
             means being part of a scalable, innovative platform
           </h2>
-          <div className='block md:hidden lg:w-1/2 lg:pr-16'>
+          <div className='block md:hidden lg:w-1/2 lg:pr-16 mt-4'>
             <Image
               src='/images/investors_hero2.png'
               alt='Investment Meeting'

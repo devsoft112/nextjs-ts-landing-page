@@ -31,18 +31,18 @@ export default function HowItWorks() {
         </h3>
       </div>
 
-      <div className='container flex flex-col md:flex-row mx-auto py-48 items-center'>
+      <div className='container flex flex-col md:flex-row mx-auto py-12 md:py-32 items-center'>
         {/* Right - Image */}
         <div className='flex flex-col items-center w-full md:w-3/5 mb-16 md:mb-0'>
           <div
             className='relative w-full h-[400px] bg-gray-100 flex items-center justify-center'
-            style={{ minHeight: '400px' }} // Ensure minimum height during image loading
+            style={{ minHeight: '400px' }}
           >
             {isImageLoading && (
               <div className='absolute inset-0 flex items-center justify-center'>
                 {/* Placeholder or loading animation */}
                 <Image
-                  src='/images/loading_mock.png' // mock image or loading skeleton
+                  src='/images/loading_mock.png'
                   alt='Loading...'
                   width={400}
                   height={200}

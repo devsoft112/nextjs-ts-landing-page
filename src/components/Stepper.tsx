@@ -42,9 +42,9 @@ export default function VerticalStepper({
               {/* Step Circle */}
               <div
                 onClick={() => onStepChange(step.id)} // Trigger step change
-                className={`cursor-pointer flex items-center justify-center w-12 h-12 rounded-full text-white font-bold text-xl mb-4 ${
+                className={`cursor-pointer flex items-center justify-center w-12 h-12 rounded-full text-gray-800 font-bold text-xl mb-4 ${
                   activeStep === step.id
-                    ? 'bg-gradient-to-r from-purple-500 to-blue-500' // Active step style
+                    ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white' // Active step style
                     : 'bg-white text-blue-500 border-2 border-gray-300'
                 }`}
               >

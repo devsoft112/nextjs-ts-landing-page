@@ -40,6 +40,11 @@ export default function Header({ isHomePage }: { isHomePage: boolean }) {
     };
   }, [isMobileMenuOpen]);
 
+  const handleMenuItemClick = () => {
+    // Close the menu after a nav link is clicked
+    setMobileMenuOpen(false);
+  };
+
   return (
     <header
       className={`absolute w-full z-20 ${isHomePage ? 'bg-transparent' : 'bg-white'}`}
@@ -53,19 +58,34 @@ export default function Header({ isHomePage }: { isHomePage: boolean }) {
 
             {/* Desktop Navigation */}
             <nav className={`hidden lg:flex space-x-10 ${textColor}`}>
-              <Link href='/' className={textColor}>
+              <Link
+                href='/'
+                className={`${textColor} hover:text-gray-300 transition duration-300`}
+              >
                 Home
               </Link>
-              <Link href='/about' className={textColor}>
+              <Link
+                href='/about'
+                className={`${textColor} hover:text-gray-300 transition duration-300`}
+              >
                 About
               </Link>
-              <Link href='/apps' className={textColor}>
+              <Link
+                href='/apps'
+                className={`${textColor} hover:text-gray-300 transition duration-300`}
+              >
                 Application
               </Link>
-              <Link href='/investors' className={textColor}>
+              <Link
+                href='/investors'
+                className={`${textColor} hover:text-gray-300 transition duration-300`}
+              >
                 Investors
               </Link>
-              <Link href='/careers' className={textColor}>
+              <Link
+                href='/careers'
+                className={`${textColor} hover:text-gray-300 transition duration-300`}
+              >
                 Careers
               </Link>
             </nav>
@@ -105,19 +125,39 @@ export default function Header({ isHomePage }: { isHomePage: boolean }) {
       >
         <div className='p-6'>
           <nav className='flex flex-col space-y-6'>
-            <Link href='/about' className='text-gray-800'>
+            <Link
+              href='/about'
+              className='text-gray-800 hover:bg-gray-200 py-2 px-4 rounded-md transition-colors duration-300'
+              onClick={handleMenuItemClick}
+            >
               About
             </Link>
-            <Link href='/apps' className='text-gray-800'>
+            <Link
+              href='/apps'
+              className='text-gray-800 hover:bg-gray-200 py-2 px-4 rounded-md transition-colors duration-300'
+              onClick={handleMenuItemClick}
+            >
               Application
             </Link>
-            <Link href='/investors' className='text-gray-800'>
+            <Link
+              href='/investors'
+              className='text-gray-800 hover:bg-gray-200 py-2 px-4 rounded-md transition-colors duration-300'
+              onClick={handleMenuItemClick}
+            >
               Investors
             </Link>
-            <Link href='/careers' className='text-gray-800'>
+            <Link
+              href='/careers'
+              className='text-gray-800 hover:bg-gray-200 py-2 px-4 rounded-md transition-colors duration-300'
+              onClick={handleMenuItemClick}
+            >
               Careers
             </Link>
-            <Button variant='primary' isDarkBg={true}>
+            <Button
+              variant='primary'
+              isDarkBg={true}
+              onClick={handleMenuItemClick}
+            >
               Sign Up
             </Button>
           </nav>
