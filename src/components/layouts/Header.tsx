@@ -42,10 +42,10 @@ export default function Header({ isHomePage }: { isHomePage: boolean }) {
                 Application
               </Link>
               <Link href='/investors' className={textColor}>
-                Press and Media
+                Investors
               </Link>
-              <Link href='/contact' className={textColor}>
-                Contact
+              <Link href='/careers' className={textColor}>
+                Careers
               </Link>
             </nav>
           </div>
@@ -82,10 +82,10 @@ export default function Header({ isHomePage }: { isHomePage: boolean }) {
                 Application
               </Link>
               <Link href='/investors' className='text-gray-800'>
-                Press and Media
+                Investors
               </Link>
               <Link href='/contact' className='text-gray-800'>
-                Contact
+                Careers
               </Link>
               <Button variant='primary' isDarkBg={true}>
                 Sign Up

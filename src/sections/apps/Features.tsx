@@ -4,7 +4,7 @@ import Button from '@/components/buttons/Button';
 
 export default function Features() {
   return (
-    <section className='py-16 bg-white'>
+    <section className='py-16 px-2 bg-white'>
       <div className='container mx-auto text-center'>
         {/* Section Title */}
         <h2 className='text-orange-500 font-semibold text-xl'>Features</h2>

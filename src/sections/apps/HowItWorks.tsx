@@ -7,7 +7,7 @@ export default function HowItWorks() {
   const [selectedStep, setSelectedStep] = useState(steps[0].id);
 
   return (
-    <section className='py-16 bg-[#F2F5FB]'>
+    <section className='py-16 px-2 bg-[#F2F5FB]'>
       <div className='container mx-auto text-center'>
         {/* Section Title */}
         <p className='text-orange-500 font-semibold'>How It Works</p>
