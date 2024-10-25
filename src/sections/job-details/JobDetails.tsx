@@ -25,10 +25,10 @@ export default function JobDetailsSection({ job }: JobDetailsSectionProps) {
       </div>
 
       <div className='py-12 px-4 md:px-16 mb-10 shadow-xl rounded-lg'>
+        <div className='mb-8 flex items-center justify-between'>
+          <JobControls />
+        </div>
         <div className='px-6'>
-          <div className='mb-8 flex items-center justify-between'>
-            <JobControls />
-          </div>
           {/* Tags */}
           <div className='flex space-x-2 mb-4'>
             {job.isNew && (

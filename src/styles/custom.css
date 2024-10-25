@@ -48,3 +48,48 @@
   top: 50%;
   left: 50%;
 }
+
+/* Hero mockup image customization in the Home page */
+
+.mockup-image {
+  position: absolute;
+  left: 50%;
+  bottom: -50px;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .mockup-image {
+    max-width: 700px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mockup-image {
+    bottom: 4px;
+    max-width: 700px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .mockup-image {
+    bottom: 36px;
+    max-width: 900px;
+  }
+}
+
+@media (min-width: 1420px) {
+  .mockup-image {
+    bottom: 48px;
+    max-width: 1000px;
+  }
+}
+
+@media (min-width: 1690px) {
+  .mockup-image {
+    bottom: 96px;
+    max-width: 1100px;
+  }
+}

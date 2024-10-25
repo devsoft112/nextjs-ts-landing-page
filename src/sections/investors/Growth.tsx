@@ -77,7 +77,7 @@ export default function Growth() {
             src='/images/investors_growth1.png'
             alt='Overview Illustration'
             layout='responsive'
-            width={500}
+            width={400}
             height={500}
             className='mx-auto'
           />

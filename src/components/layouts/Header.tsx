@@ -1,7 +1,7 @@
 // src/components/layouts/Header.tsx
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi'; // Icons for mobile menu
 
 import '../../styles/custom.css';
@@ -15,13 +15,34 @@ export default function Header({ isHomePage }: { isHomePage: boolean }) {
     ? '/images/logo_light.png'
     : '/images/logo_dark.png';
 
+  const menuRef = useRef<HTMLDivElement>(null);
+
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setMobileMenuOpen(false);
+      }
+    };
+
+    if (isMobileMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <header
-      className={`absolute w-full z-10 ${isHomePage ? 'bg-transparent' : 'bg-white'}`}
+      className={`absolute w-full z-20 ${isHomePage ? 'bg-transparent' : 'bg-white'}`}
     >
       <div className='container-fluid mx-auto flex items-center justify-between p-6 px-4 lg:px-24'>
         <div className='flex items-center justify-between w-full'>
@@ -70,30 +91,38 @@ export default function Header({ isHomePage }: { isHomePage: boolean }) {
         </div>
       </div>
 
-      {/* Mobile Sidebar */}
+      {/* Backdrop for mobile menu */}
       {isMobileMenuOpen && (
-        <div className='lg:hidden fixed top-0 left-0 w-64 h-full bg-white shadow-lg z-150'>
-          <div className='p-6'>
-            <nav className='flex flex-col space-y-6'>
-              <Link href='/about' className='text-gray-800'>
-                About
-              </Link>
-              <Link href='/apps' className='text-gray-800'>
-                Application
-              </Link>
-              <Link href='/investors' className='text-gray-800'>
-                Investors
-              </Link>
-              <Link href='/careers' className='text-gray-800'>
-                Careers
-              </Link>
-              <Button variant='primary' isDarkBg={true}>
-                Sign Up
-              </Button>
-            </nav>
-          </div>
-        </div>
+        <div className='fixed inset-0 bg-black bg-opacity-50 z-10'></div>
       )}
+
+      {/* Mobile Sidebar */}
+      <div
+        ref={menuRef}
+        className={`lg:hidden fixed top-0 left-0 w-64 h-full bg-white shadow-lg z-20 transform ${
+          isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
+        } transition-transform duration-300 ease-in-out`}
+      >
+        <div className='p-6'>
+          <nav className='flex flex-col space-y-6'>
+            <Link href='/about' className='text-gray-800'>
+              About
+            </Link>
+            <Link href='/apps' className='text-gray-800'>
+              Application
+            </Link>
+            <Link href='/investors' className='text-gray-800'>
+              Investors
+            </Link>
+            <Link href='/careers' className='text-gray-800'>
+              Careers
+            </Link>
+            <Button variant='primary' isDarkBg={true}>
+              Sign Up
+            </Button>
+          </nav>
+        </div>
+      </div>
     </header>
   );
 }

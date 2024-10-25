@@ -2,7 +2,7 @@
 
 import { ContactUs, Growth, Hero, JoinUs } from '@/sections/investors';
 
-export default function Apps() {
+export default function Investors() {
   return (
     <>
       <Hero />

@@ -5,7 +5,7 @@ export default function Hero() {
     <section className='py-16 bg-white pt-32'>
       <div className='container mx-auto flex flex-col lg:flex-row items-center justify-between'>
         {/* Mobile View Title */}
-        <div className='md:hidden'>
+        <div className='md:hidden w-full px-4'>
           <h3 className='text-orange-500 text-xl font-semibold'>About us</h3>
           <h2 className='text-5xl font-light mt-4'>
             Who <span className='font-extrabold'>we</span>{' '}

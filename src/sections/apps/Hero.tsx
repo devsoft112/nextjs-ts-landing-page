@@ -5,9 +5,9 @@ import DownloadButton from '@/components/DownloadButton'; // Assuming this compo
 export default function AppsHero() {
   return (
     <section className='relative bg-gradient-to-r from-purple-600 to-blue-500 text-white pt-20'>
-      <div className='container mx-auto flex flex-col lg:flex-row items-center justify-between px-4'>
+      <div className='container mx-auto flex flex-col xl:flex-row items-center justify-between px-4'>
         {/* Text Section */}
-        <div className='lg:w-2/5 text-center lg:text-left max-w-xl'>
+        <div className='xl:w-2/5 text-center lg:text-left max-w-xl'>
           <h1 className='text-4xl md:text-5xl font-light leading-tight mt-24'>
             A <span className='font-extrabold'>New Era</span> of{' '}
             <span className='font-extrabold'>Job</span> and{' '}
@@ -58,13 +58,12 @@ export default function AppsHero() {
         </div>
 
         {/* Phone Mockups */}
-        <div className='lg:w-3/5 mt-10 lg:mt-auto relative bottom-0'>
+        <div className='xl:w-3/5 mt-10 lg:mt-auto relative bottom-0'>
           <Image
             src='/images/app_hero_phones.png' // Replace with actual image path
             alt='Phone mockup left'
             width={1200}
             height={600}
-            className='relative z-4'
           />
         </div>
       </div>

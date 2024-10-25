@@ -49,7 +49,6 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body>
-        {/* Use ClientHeader to handle client-side logic */}
         <ClientHeader />
 
         {/* Main content */}

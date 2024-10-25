@@ -28,7 +28,7 @@ export default function CareerHero() {
             <select
               value={selectedCountry}
               onChange={(e) => setSelectedCountry(e.target.value)}
-              className='bg-transparent px-4 pr-7 md:pr-10 text-gray-500 focus:outline-none search-box text-sm md:text-base'
+              className='bg-transparent pl-0 md:pl-4 pr-7 md:pr-10 text-gray-500 focus:outline-none search-box text-sm md:text-base'
             >
               <option value='' disabled>
                 Select Location
