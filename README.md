@@ -4,6 +4,8 @@
 
 This project is a dynamic web application built with Next.js and Tailwind CSS. It includes multiple sections such as Careers, Job Details, and How It Works. The application is fully responsive, featuring interactive elements like mobile-friendly navigation, a vertical stepper, and detailed job listings. The Stepper component allows users to view different content on each step, optimized for both desktop and mobile views.
 
+Live Website: jovoria-lcc.vercel.app[https://jovoria-lcc.vercel.app/]
+
 ## Technologies Used
 
 - **Next.js**: A React framework for server-side rendering and static site generation.
